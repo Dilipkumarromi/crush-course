@@ -10,7 +10,7 @@ import IsLogin from './UserComponent/conditionalRendering'
 import LoginForm from './/UserComponent/LoginForm'
 import Userfn from './UserComponent/FuncProp'
 import UsEffect from './/Hooks/Hooks_useEffect'
-import tbl from './/DataType/ArrayToListLoop'
+import Tbl from './DataType/ArrayToListLoop'
 function App() {
     function SendData(){
       alert('receiver data')
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <tbl/>
+        <Tbl/>
                <hr/>
        <UsEffect/>
       <hr/>
