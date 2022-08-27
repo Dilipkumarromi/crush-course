@@ -10,7 +10,10 @@ import IsLogin from './UserComponent/conditionalRendering'
 import LoginForm from './/UserComponent/LoginForm'
 import Userfn from './UserComponent/FuncProp'
 import UsEffect from './/Hooks/Hooks_useEffect'
-import Tbl from './DataType/ArrayToListLoop'
+import BasicExample from './UserComponent/nestedTable'
+import PurComp from './/pureComponent/pureComp'
+import Tbl from './UserComponent/Table';
+
 function App() {
     function SendData(){
       alert('receiver data')
@@ -19,6 +22,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Pure component</h1>
+        <PurComp/>
+      <hr/>
+      <BasicExample/>
+
         <Tbl/>
                <hr/>
        <UsEffect/>
