@@ -13,6 +13,12 @@ import UsEffect from './/Hooks/Hooks_useEffect'
 import BasicExample from './UserComponent/nestedTable'
 import PurComp from './/pureComponent/pureComp'
 import Tbl from './UserComponent/Table';
+import Home from './Component/Home'
+import About from './Component/About'
+import { BrowserRouter, Route, Routes,Link, Navigate } from 'react-router-dom';
+import Page404 from './Component/PageNotFound';
+import RouterParam from './Component/RouterParams'
+
 
 function App() {
     function SendData(){
@@ -22,6 +28,30 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h1>Router Home or About</h1>
+      <BrowserRouter>
+      
+      <Link to="/">Home</Link>
+      <Link to="/About">About</Link>
+      <Link to="/RouterParam/Dilip">Params Router</Link>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/About' element={<About/>}/>
+        
+        {/* Param Router */}
+        <Route path='/RouterParam/:name' element={<RouterParam/>}/>
+
+        {/* wild-card page */}
+        <Route path='/*' element={<Page404/>}/>
+
+        {/* Page redirect/Navigate */}
+        {/* <Route path='/*' element={<Navigate to='/'/>}/> */}
+
+      </Routes>
+      </BrowserRouter>
+      <hr/>
+      
+
         <h1>Pure component</h1>
         <PurComp/>
       <hr/>
