@@ -17,8 +17,13 @@ import Home from './Component/Home'
 import About from './Component/About'
 import { BrowserRouter, Route, Routes,Link, Navigate } from 'react-router-dom';
 import Page404 from './Component/PageNotFound';
+<<<<<<< HEAD
 import RouterParam from './Component/RouterParams'
 import SearchParams from './Component/SearchParamsRouter';
+=======
+import Crud from './API_Intergraded/CRUD';
+// import RouterParam from './Component/RouterParams'
+>>>>>>> f6fa2c7c956ec6e7a0c6d02a96ff7eed3c435494
 
 
 function App() {
@@ -29,6 +34,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h1>CRUD Operation </h1>
+      <Crud/>
+        <hr/>
+       
+
       <h1>Router Home or About</h1>
       <BrowserRouter>
       
@@ -41,8 +51,12 @@ function App() {
         <Route path='/About' element={<About/>}/>
         
         {/* Param Router */}
+<<<<<<< HEAD
         <Route path='/RouterParam/:name' element={<RouterParam/>}/>
         <Route path='/SearchParams' element={<SearchParams/>}/>
+=======
+        {/* <Route path='/RouterParam/:name' element={<RouterParam/>}/> */}
+>>>>>>> f6fa2c7c956ec6e7a0c6d02a96ff7eed3c435494
 
         {/* wild-card page */}
         <Route path='/*' element={<Page404/>}/>

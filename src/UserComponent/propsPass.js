@@ -1,4 +1,3 @@
-import { PlaceholderButton } from "react-bootstrap"
 
 function UserProps(props){
     console.log('props list',props)
