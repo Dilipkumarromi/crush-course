@@ -18,6 +18,7 @@ import About from './Component/About'
 import { BrowserRouter, Route, Routes,Link, Navigate } from 'react-router-dom';
 import Page404 from './Component/PageNotFound';
 import RouterParam from './Component/RouterParams'
+import SearchParams from './Component/SearchParamsRouter';
 
 
 function App() {
@@ -34,12 +35,14 @@ function App() {
       <Link to="/">Home</Link>
       <Link to="/About">About</Link>
       <Link to="/RouterParam/Dilip">Params Router</Link>
+      <Link to="/SearchParams">Filter</Link>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/About' element={<About/>}/>
         
         {/* Param Router */}
         <Route path='/RouterParam/:name' element={<RouterParam/>}/>
+        <Route path='/SearchParams' element={<SearchParams/>}/>
 
         {/* wild-card page */}
         <Route path='/*' element={<Page404/>}/>
